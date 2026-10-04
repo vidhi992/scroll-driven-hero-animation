@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" fill="none" className="w-full h-auto drop-shadow-2xl">
+  <defs>
+    <!-- Body Gradients -->
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d3238" />
+      <stop offset="35%" stop-color="#181a1d" />
+      <stop offset="70%" stop-color="#0f1114" />
+      <stop offset="100%" stop-color="#08090a" />
+    </linearGradient>
+
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2226" />
+      <stop offset="100%" stop-color="#0a0b0d" />
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.25" />
+      <stop offset="40%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="rearLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64748b" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="tireGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2022" />
+      <stop offset="100%" stop-color="#0b0c0d" />
+    </linearGradient>
+
+    <linearGradient id="headlightBeam" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <radialGradient id="groundShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.75" />
+      <stop offset="60%" stop-color="#000000" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="underglowNeon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#0369a1" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Underbody Shadows & Neon Cast -->
+  <ellipse cx="500" cy="320" rx="460" ry="24" fill="url(#groundShadow)" />
+  <ellipse cx="500" cy="316" rx="380" ry="16" fill="url(#underglowNeon)" filter="url(#subtleGlow)" />
+
+  <!-- Headlight beam projection forward -->
+  <polygon points="900,240 1000,205 1000,320 900,265" fill="url(#headlightBeam)" opacity="0.35" />
+
+  <!-- Main Body Silhouette & Aerodynamic Panels -->
+  <!-- Rear Spoiler / Wing -->
+  <path d="M125 188 L70 182 Q60 180 62 174 L75 160 Q85 158 135 162 Z" fill="#14171a" stroke="#334155" stroke-width="1.5" />
+  <path d="M90 185 L95 210 L108 210 L105 186 Z" fill="#0f1114" />
+  <path d="M130 187 L134 212 L146 212 L143 188 Z" fill="#0f1114" />
+
+  <!-- Chassis Lower Skirt & Diffuser -->
+  <path d="M100 285 L180 286 L205 285 L320 285 L400 287 L650 287 L740 285 L850 285 L885 275 L860 265 L120 268 Z" fill="#090a0c" />
+
+  <!-- Main Car Body Shell -->
+  <path d="M75 220 
+           Q80 205 110 200 
+           L240 195 
+           Q340 195 420 155 
+           L560 115 
+           Q620 98 710 135 
+           L840 195 
+           Q880 210 915 235 
+           Q935 250 930 265 
+           Q920 278 880 280 
+           L825 280 
+           A65 65 0 0 0 695 280 
+           L385 280 
+           A65 65 0 0 0 255 280 
+           L140 280 
+           Q90 280 75 250 
+           Z" 
+        fill="url(#bodyGrad)" 
+        stroke="#334155" 
+        stroke-width="1.5" />
+
+  <!-- Aerodynamic Shoulder Reflection Line -->
+  <path d="M110 205 Q280 198 420 160 Q550 125 700 145 Q820 195 910 240" 
+        fill="none" 
+        stroke="url(#accentCyan)" 
+        stroke-width="2.5" 
+        opacity="0.85" 
+        filter="url(#subtleGlow)" />
+
+  <!-- Secondary Metallic Crisp Highlight Line -->
+  <path d="M140 215 Q260 210 400 210 Q650 210 870 248" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="1" 
+        opacity="0.3" />
+
+  <!-- Cabin Greenhouse Glass / Cockpit -->
+  <path d="M425 158 
+           L555 120 
+           Q610 106 690 138 
+           L805 190 
+           Q780 192 680 192 
+           L440 192 
+           Z" 
+        fill="url(#glassGrad)" 
+        stroke="#475569" 
+        stroke-width="1.5" />
+
+  <!-- Window Pillars (A & B Pillars) -->
+  <path d="M550 122 L565 122 L455 190 L438 190 Z" fill="#181a1e" opacity="0.9" />
+  <path d="M685 140 L698 143 L710 190 L696 190 Z" fill="#181a1e" opacity="0.8" />
+
+  <!-- Interior Silhouette (Steering & High-end Bucket Seat) -->
+  <path d="M580 178 Q590 150 610 150 Q620 165 620 188 Z" fill="#090d16" opacity="0.75" />
+  <circle cx="700" cy="165" r="9" fill="none" stroke="#64748b" stroke-width="2" opacity="0.6" />
+
+  <!-- Cockpit Edge Chrome Trimming -->
+  <path d="M425 158 L555 120 Q610 106 690 138 L805 190" 
+        fill="none" 
+        stroke="#94a3b8" 
+        stroke-width="1.5" 
+        opacity="0.6" />
+
+  <!-- Sculpted Door Panel Crease & Air Scoop -->
+  <path d="M460 198 L370 260 L450 260 L580 200 Z" fill="#0a0c0e" opacity="0.6" />
+  <path d="M640 202 L600 260 L620 260 L675 204 Z" fill="#0d0f12" opacity="0.5" />
+
+  <!-- Dynamic Side Air Vent / Louvers -->
+  <line x1="380" y1="235" x2="430" y2="235" stroke="#38bdf8" stroke-width="1.5" opacity="0.7" />
+  <line x1="390" y1="242" x2="435" y2="242" stroke="#38bdf8" stroke-width="1.5" opacity="0.5" />
+  <line x1="400" y1="249" x2="440" y2="249" stroke="#38bdf8" stroke-width="1.5" opacity="0.3" />
+
+  <!-- Rear Light Bar (Signature Horizon Taillight) -->
+  <path d="M72 222 L115 218 L115 226 L72 232 Z" fill="url(#rearLight)" filter="url(#subtleGlow)" />
+  <line x1="72" y1="225" x2="115" y2="221" stroke="#fca5a5" stroke-width="2" />
+
+  <!-- Front Headlight Assembly (Cyber DRL + Projector Lens) -->
+  <path d="M855 212 L905 236 L865 240 Z" fill="#0c4a6e" />
+  <path d="M860 216 Q895 232 908 238" stroke="#38bdf8" stroke-width="3" fill="none" filter="url(#neonGlow)" />
+  <circle cx="885" cy="230" r="3.5" fill="#e0f2fe" filter="url(#subtleGlow)" />
+  <circle cx="898" cy="235" r="2.5" fill="#38bdf8" />
+
+  <!-- WHEEL 1: REAR WHEEL ASSEMBLY (cx=200, cy=280, r=62) -->
+  <!-- Tire -->
+  <circle cx="200" cy="280" r="62" fill="url(#tireGrad)" stroke="#111315" stroke-width="2" />
+  <circle cx="200" cy="280" r="54" fill="#050607" />
+  <!-- Tread detail ring -->
+  <circle cx="200" cy="280" r="58" fill="none" stroke="#262626" stroke-width="1.5" stroke-dasharray="3,3" />
+  <!-- Brake Disc & Red Caliper -->
+  <circle cx="200" cy="280" r="42" fill="#334155" stroke="#475569" stroke-width="1" />
+  <path d="M172 258 A38 38 0 0 1 204 246 L198 260 A24 24 0 0 0 180 268 Z" fill="#ef4444" filter="url(#subtleGlow)" />
+  <!-- Rim Spokes (Modern Turbofan / Geometric Multi-Spoke) -->
+  <g stroke="url(#accentCyan)" stroke-width="2.5" opacity="0.95">
+    <line x1="200" y1="242" x2="200" y2="318" />
+    <line x1="162" y1="280" x2="238" y2="280" />
+    <line x1="173" y1="253" x2="227" y2="307" />
+    <line x1="173" y1="307" x2="227" y2="253" />
+    <line x1="184" y1="245" x2="216" y2="315" />
+    <line x1="184" y1="315" x2="216" y2="245" />
+  </g>
+  <!-- Center Hub Cap -->
+  <circle cx="200" cy="280" r="14" fill="#090a0c" stroke="#38bdf8" stroke-width="2" />
+  <circle cx="200" cy="280" r="5" fill="#38bdf8" />
+
+  <!-- WHEEL 2: FRONT WHEEL ASSEMBLY (cx=760, cy=280, r=62) -->
+  <!-- Tire -->
+  <circle cx="760" cy="280" r="62" fill="url(#tireGrad)" stroke="#111315" stroke-width="2" />
+  <circle cx="760" cy="280" r="54" fill="#050607" />
+  <!-- Tread detail ring -->
+  <circle cx="760" cy="280" r="58" fill="none" stroke="#262626" stroke-width="1.5" stroke-dasharray="3,3" />
+  <!-- Brake Disc & Red Caliper -->
+  <circle cx="760" cy="280" r="42" fill="#334155" stroke="#475569" stroke-width="1" />
+  <path d="M732 258 A38 38 0 0 1 764 246 L758 260 A24 24 0 0 0 740 268 Z" fill="#ef4444" filter="url(#subtleGlow)" />
+  <!-- Rim Spokes (Modern Turbofan / Geometric Multi-Spoke) -->
+  <g stroke="url(#accentCyan)" stroke-width="2.5" opacity="0.95">
+    <line x1="760" y1="242" x2="760" y2="318" />
+    <line x1="722" y1="280" x2="798" y2="280" />
+    <line x1="733" y1="253" x2="787" y2="307" />
+    <line x1="733" y1="307" x2="787" y2="253" />
+    <line x1="744" y1="245" x2="776" y2="315" />
+    <line x1="744" y1="315" x2="776" y2="245" />
+  </g>
+  <!-- Center Hub Cap -->
+  <circle cx="760" cy="280" r="14" fill="#090a0c" stroke="#38bdf8" stroke-width="2" />
+  <circle cx="760" cy="280" r="5" fill="#38bdf8" />
+
+  <!-- Wheel Arch Accents & Fender Reflections -->
+  <path d="M125 280 A75 75 0 0 1 275 280" fill="none" stroke="#1e293b" stroke-width="4" opacity="0.5" />
+  <path d="M685 280 A75 75 0 0 1 835 280" fill="none" stroke="#1e293b" stroke-width="4" opacity="0.5" />
+</svg>
