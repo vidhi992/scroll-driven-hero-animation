@@ -7,7 +7,7 @@ The project focuses on creating a smooth, responsive scrolling experience where 
 ## 🌐 Live Demo
 
 **Live Website:**  
-https://scroll-driven-hero-animation.vercel.app
+https://scroll-driven-hero-animation-azure.vercel.app/
 
 **GitHub Repository:**  
 https://github.com/vidhi992/scroll-driven-hero-animation
